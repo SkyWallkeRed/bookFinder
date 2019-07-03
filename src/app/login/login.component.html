@@ -1,0 +1,9 @@
+<mat-card class="enterNameContainer">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>myBookie</mat-card-title>
+
+    <app-name-editor [setup]="inputSetup" (nameOutput)="onNameSubmit($event)"></app-name-editor>
+
+  </mat-card-header>
+</mat-card>

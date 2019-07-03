@@ -1,0 +1,17 @@
+<mat-card class="book-card" (click)="showFullInfo()">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{volumeInfo.title}}</mat-card-title>
+    <mat-card-subtitle>{{volumeInfo.authors}}</mat-card-subtitle>
+  </mat-card-header>
+  <img class="img" mat-card-image src="{{volumeInfo.imageLinks.smallThumbnail}}" alt="">
+  <mat-card-content>
+  </mat-card-content>
+  <div class="hoverBtnContainer">
+    <mat-card-actions>
+      <button class="hide" mat-button>ADD+</button>
+      <button class="hide" mat-button>REMOVE-</button>
+    </mat-card-actions>
+  </div>
+
+</mat-card>
