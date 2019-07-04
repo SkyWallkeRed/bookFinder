@@ -25,7 +25,6 @@ export class SearchBooksComponent implements OnInit {
   }
 
   onInputSubmit($event) {
-    console.log($event);
     this.booksService.getBooks(String($event));
   }
 

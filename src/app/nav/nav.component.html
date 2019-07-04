@@ -1,8 +1,12 @@
 <div class="navContainer">
-    <span class="userName">Welcome {{currUser.name}}</span>
+  <span class="userName">Welcome {{currUser.name}}</span>
+  <div class="sticky">
+    <button (click)="logOutUser()" class="logOutBtn" mat-button type="button">logOut</button>
+    <button (click)="openDialog()" class="wishListBtn" mat-button type="button">WishList</button>
+    <button (click)="openLastDialog()" class="wishListBtn" mat-button type="button">LastSearches</button>
 
-  <div class="inputContainer">
-    <app-search-books></app-search-books>
-
+    <div class="inputContainer">
+      <app-search-books></app-search-books>
+    </div>
   </div>
 </div>

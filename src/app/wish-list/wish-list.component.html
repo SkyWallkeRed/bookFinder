@@ -1,0 +1,16 @@
+<ol>
+  <li class="popContainer">
+
+    <mat-list role="list" *ngFor="let wish of wishList; let i = index">
+      <mat-list-item role="listitem">
+        <span class="listItemName">{{wish.title}}  </span>
+        <button class="removeBtn" (click)="removeFromWishList(i)" mat-button>Remove</button>
+      </mat-list-item>
+    </mat-list>
+    <mat-list *ngIf="!wishList.length"> Feel Free To Add Items.</mat-list>
+<!--    <button (click)="add()">add</button>-->
+<!--    <button (click)="close()">close</button>-->
+  </li>
+</ol>
+
+

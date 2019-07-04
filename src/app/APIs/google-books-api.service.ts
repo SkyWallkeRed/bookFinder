@@ -25,7 +25,6 @@ export class GoogleBooksApiService {
   }
 
   findBooks(value: string) {
-    console.log(this.buildQuery(value, 10));
     return this.http.get(this.buildQuery(value, 10));
   }
 }

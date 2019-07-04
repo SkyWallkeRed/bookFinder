@@ -1,23 +1,8 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {BookInfoComponent} from '../book-info/book-info.component';
+import {MatDialog} from '@angular/material';
+import {BookInterface, UserInterface} from '../interfaces';
 
-interface BookInterface {
-  authors: string[];
-  averageRating: number;
-  categories: string[];
-  description: string;
-  imageLinks: { smallThumbnail: string, thumbnail: string };
-  infoLink: string;
-  language: string;
-  maturityRating: string;
-  pageCount: number;
-  previewLink: string;
-  printType: number;
-  publishedDate: number;
-  publisher: number;
-  ratingsCount: number;
-  subtitle: number;
-  title: number;
-}
 
 @Component({
   selector: 'app-book',
@@ -26,9 +11,10 @@ interface BookInterface {
 })
 export class BookComponent implements OnInit {
   @Input() bookData;
+  @Output() addToWishList = new EventEmitter<BookInterface>();
   public volumeInfo: BookInterface;
 
-  constructor() {
+  constructor(public dialog: MatDialog) {
   }
 
   ngOnInit() {
@@ -36,7 +22,6 @@ export class BookComponent implements OnInit {
   }
 
   loadBookData(bookData: any): void {
-    console.log(this.volumeInfo);
 
     this.volumeInfo = {
       authors: bookData.volumeInfo.authors || [''],
@@ -60,7 +45,20 @@ export class BookComponent implements OnInit {
   }
 
   showFullInfo() {
-    console.log(this.volumeInfo);
+    this.openDialog(this.volumeInfo);
+  }
+
+  openDialog(data: BookInterface): void {
+    const dialogRef = this.dialog.open(BookInfoComponent, {
+      width: '550px',
+      data: {bookData: data}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) { // result is boolean
+        this.addToWishList.emit(this.volumeInfo);
+      }
+    });
   }
 
 }

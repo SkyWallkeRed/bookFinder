@@ -16,7 +16,12 @@ import {BookComponent} from './book/book.component';
 import {BookListComponent} from './book-list/book-list.component';
 import {HttpClientModule} from '@angular/common/http';
 import {MatPaginatorModule} from '@angular/material/paginator';
-import { FormsModule } from '@angular/forms';
+import {FormsModule} from '@angular/forms';
+import {MatDialogModule} from '@angular/material/dialog';
+import {BookInfoComponent} from './book-info/book-info.component';
+import {WishListComponent} from './wish-list/wish-list.component';
+import {MatListModule} from '@angular/material/list';
+import { LastSearchesComponent } from './last-searches/last-searches.component';
 
 
 @NgModule({
@@ -29,6 +34,9 @@ import { FormsModule } from '@angular/forms';
     SearchBooksComponent,
     BookComponent,
     BookListComponent,
+    BookInfoComponent,
+    WishListComponent,
+    LastSearchesComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,8 +48,11 @@ import { FormsModule } from '@angular/forms';
     MatCheckboxModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatDialogModule,
+    MatListModule
   ],
+  entryComponents: [BookInfoComponent, WishListComponent, LastSearchesComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

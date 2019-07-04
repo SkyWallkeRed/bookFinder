@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {BooksService} from '../services/books.service';
+import {AppContextService} from '../services/app-context.service';
 
 @Component({
   selector: 'app-book-list',
@@ -9,7 +10,10 @@ import {BooksService} from '../services/books.service';
 export class BookListComponent implements OnInit {
   private booksToShow: {}[];
 
-  constructor(private booksService: BooksService) {
+  constructor(
+    private booksService: BooksService,
+    private appContext: AppContextService
+  ) {
   }
 
   ngOnInit() {
@@ -19,4 +23,7 @@ export class BookListComponent implements OnInit {
     });
   }
 
+  addToWishList(bookInfo) {
+    this.appContext.addToUserWishList(bookInfo);
+  }
 }

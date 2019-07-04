@@ -1,3 +1,5 @@
-<app-nav *ngIf="currUser"></app-nav>
+<div class="sticky">
+  <app-nav *ngIf="currUser"></app-nav>
+</div>
 <app-login *ngIf="!currUser"></app-login>
 <app-book-list *ngIf="currUser"></app-book-list>

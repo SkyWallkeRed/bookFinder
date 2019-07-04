@@ -1,22 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Barriecito&display=swap');
+
 .navContainer {
-  min-height: 150px;
+  min-height: 110px;
   background-color: #478887;
-  //text-align: center;
-}
+  font-family: 'Barriecito', cursive;
 
 
-.userName {
-  float: left;
-  padding-left: 30px;
-  padding-top: 50px;
-  color: white;
-  font-size: 30px;
+  .wishListBtn {
+    float: right;
+    margin: 5px 10px 5px 5px;
+    color: white;
+    border: solid 1px white;
+    font-family: 'Barriecito', cursive;
+  }
+
+  .logOutBtn {
+    float: right;
+    margin: 5px 10px 5px 5px;
+    color: white;
+    border: solid 1px white;
+    font-family: 'Barriecito', cursive;
+  }
+
+  .userName {
+    display: block;
+    padding-left: 30px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    color: white;
+    font-size: 30px;
+  }
+
+  .inputContainer {
+    padding-left: 30px;
+    z-index: 10;
+  }
 }
 
-.inputContainer {
-  position: fixed;
-  padding-top: 85px;
-  padding-left: 50px;
-  z-index: 10;
+@media only screen and (max-width: 600px) {
+  .navContainer {
+    min-height: 150px;
+    background-color: #478887;
+    text-align: center;
+
+    .wishListBtn {
+      float: none;
+      color: white;
+      border: solid 1px white;
+    }
+
+    .logOutBtn {
+      float: none;
+      color: white;
+      border: solid 1px white;
+    }
+
+    .userName {
+      padding-left: 0;
+      padding-top: 15px;
+      color: white;
+      font-size: 20px;
+    }
+
+    .inputContainer {
+      padding-left: 0;
+      z-index: 10;
+    }
+  }
 }
+
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  font-size: 20px;
+}
+
 

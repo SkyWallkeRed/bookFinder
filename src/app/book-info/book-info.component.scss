@@ -1,0 +1,17 @@
+p {
+  padding: 5px;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.authors {
+  color: gray;
+}
+
+@media only screen and (max-width: 600px) {
+  .popContainer{
+    width: 100%;
+  }
+}

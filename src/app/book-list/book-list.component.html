@@ -1,7 +1,7 @@
 
 <div class="bookListContainer">
   <div *ngFor="let book of booksToShow" class="bookContainer">
-    <app-book [bookData]="book"></app-book>
+    <app-book (addToWishList)="addToWishList($event)" [bookData]="book"></app-book>
   </div>
 </div>
 
