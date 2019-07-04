@@ -1,19 +1,22 @@
 .book-card {
   cursor: pointer;
   max-height: 200px;
+
   .img {
     max-height: 300px;
   }
 }
-mat-card-content>:first-child, .mat-card>:first-child {
+
+mat-card-content > :first-child, .mat-card > :first-child {
   margin-top: 0;
   min-height: 130px;
 }
 
-.mat-card-header{
-  display: inline-block!important; // material over
+.mat-card-header {
+  display: inline-block !important; // material over
 }
-.hide{
+
+.hide {
   opacity: 0;
 }
 

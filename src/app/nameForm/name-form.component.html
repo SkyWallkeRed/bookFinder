@@ -1,7 +1,9 @@
 <form class="form-group" [formGroup]="nameForm" novalidate>
   <label class="center-block">
-    <input placeholder="{{setup.placeHolder}}" *ngIf="setup.autoComp.isActive" autocomplete="{{setup.autoComp.value}}" (keydown.enter)="updateName()" class="form-control inputOver notifyColor" formControlName="name">
-    <input placeholder="{{setup.placeHolder}}" *ngIf="!(setup.autoComp.isActive)" (keydown.enter)="updateName()" class="form-control inputOver notifyColor" formControlName="name" >
+    <input placeholder="{{setup.placeHolder}}" *ngIf="setup.autoComp.isActive" autocomplete="{{setup.autoComp.value}}"
+           (keydown.enter)="updateName()" class="form-control inputOver notifyColor" formControlName="name">
+    <input placeholder="{{setup.placeHolder}}" *ngIf="!(setup.autoComp.isActive)" (keydown.enter)="updateName()"
+           class="form-control inputOver notifyColor" formControlName="name">
   </label>
 
   <div
@@ -11,7 +13,9 @@
     </div>
   </div>
   <div>
-    <button *ngIf="setup.isBtn" mat-button type="button" [disabled]="(!nameForm.valid)" class="cp btnOver" (click)="updateName()"> book me in</button>
+    <button *ngIf="setup.isBtn" mat-button type="button" [disabled]="(!nameForm.valid)" class="cp btnOver"
+            (click)="updateName()"> book me in
+    </button>
   </div>
 </form>
 

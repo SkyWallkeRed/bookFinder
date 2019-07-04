@@ -33,10 +33,9 @@ export class UserService {
   }
 
   login(userName: string) {
-    const activeUser: UserInterface = {
+    this.user = {
       name: userName
     };
-    this.user = activeUser;
     this.userSubject.next(this.user);
     this.storeService.setItem(booksAppStorageEnum.USER, this.user);
   }

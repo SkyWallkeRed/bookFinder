@@ -8,7 +8,7 @@ import {AppContextService} from '../services/app-context.service';
   styleUrls: ['./book-list.component.scss']
 })
 export class BookListComponent implements OnInit {
-  private booksToShow: {}[];
+  public booksToShow: {}[];
 
   constructor(
     private booksService: BooksService,

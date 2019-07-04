@@ -21,7 +21,7 @@ export class StoreService {
     localStorage.removeItem(booksAppStorageEnum.USER);
   }
 
-  clearAllUserData() {
+  clearAllUserData() { // for dev
     localStorage.removeItem(booksAppStorageEnum.USER);
     localStorage.removeItem(booksAppStorageEnum.WISH_LIST);
     localStorage.removeItem(booksAppStorageEnum.LAST_SEARCH);

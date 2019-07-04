@@ -21,7 +21,6 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {BookInfoComponent} from './book-info/book-info.component';
 import {WishListComponent} from './wish-list/wish-list.component';
 import {MatListModule} from '@angular/material/list';
-import { LastSearchesComponent } from './last-searches/last-searches.component';
 
 
 @NgModule({
@@ -36,7 +35,6 @@ import { LastSearchesComponent } from './last-searches/last-searches.component';
     BookListComponent,
     BookInfoComponent,
     WishListComponent,
-    LastSearchesComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +50,7 @@ import { LastSearchesComponent } from './last-searches/last-searches.component';
     MatDialogModule,
     MatListModule
   ],
-  entryComponents: [BookInfoComponent, WishListComponent, LastSearchesComponent],
+  entryComponents: [BookInfoComponent, WishListComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

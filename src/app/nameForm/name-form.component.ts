@@ -11,7 +11,7 @@ export class NameFormComponent implements OnInit {
   @Input() setup: InputInterface;
   @Output() private nameOutput = new EventEmitter<UserInterface>();
 
-  private nameForm: FormGroup;
+  public nameForm: FormGroup;
   private Setup: InputInterface;
 
   constructor() {

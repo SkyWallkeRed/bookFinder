@@ -1,8 +1,0 @@
-<div class="resultContainer">
-  <p *ngIf="!lastSearchArray.length" class="coolFont">Feel Free To Search</p>
-  <ol>
-
-    <li (click)="setResultToBe(i)" *ngFor="let result of lastSearchArray; let i = index"> {{result.key}}</li>
-  </ol>
-</div>
-

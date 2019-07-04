@@ -1,5 +1,5 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
+import {MAT_DIALOG_DATA} from '@angular/material';
 import {AppContextService} from '../services/app-context.service';
 
 @Component({
@@ -8,11 +8,10 @@ import {AppContextService} from '../services/app-context.service';
   styleUrls: ['./wish-list.component.scss']
 })
 export class WishListComponent implements OnInit {
-  private wishList = [];
+  public wishList = [];
 
   constructor(
     private appContext: AppContextService,
-    public dialogRef: MatDialogRef<WishListComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) {
   }
 
@@ -20,15 +19,7 @@ export class WishListComponent implements OnInit {
     this.wishList = this.appContext.userWishList;
   }
 
-  close(): void {
-    this.dialogRef.close(false);
-  }
-
-  add() {
-    this.dialogRef.close(true);
-  }
-
   removeFromWishList(eleToRemoveIndex: number): void {
-  this.appContext.removeFromWishList(eleToRemoveIndex);
+    this.appContext.removeFromWishList(eleToRemoveIndex);
   }
 }

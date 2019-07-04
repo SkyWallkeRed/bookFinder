@@ -11,7 +11,6 @@ export class BooksService {
   private bookSearchResultList: { items: {}[] };
   public bookSearchResultListSubject = new ReplaySubject(1);
   private bookSearchSessionHistory = [];
-  public bookSearchResultListForRestorSubject = new ReplaySubject(1);
   public currentSearchString: string;
 
   constructor(
@@ -24,7 +23,6 @@ export class BooksService {
       this.bookSearchResultListSubject.next(this.bookSearchResultList);
     }
   }
-
 
   getBooks(searchString: string) {
     if (!searchString) {

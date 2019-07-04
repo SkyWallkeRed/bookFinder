@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
 import {UserService} from './user.service';
 import {StoreService} from './store.service';
-import {BooksService} from './books.service';
 import {booksAppStorageEnum, UserInterface} from '../interfaces';
 import {ReplaySubject} from 'rxjs';
 
@@ -18,7 +17,6 @@ export class AppContextService {
   constructor(
     private userService: UserService,
     private storService: StoreService,
-    private bookService: BooksService
   ) {
     this.userService.userSubject.subscribe((user: UserInterface) => {
       this.currentUser = user;
